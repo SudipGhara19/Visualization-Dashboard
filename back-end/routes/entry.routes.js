@@ -1,9 +1,9 @@
 import express from 'express';
-import { createEntry } from '../controllers/entry.controller.js';
+import { createEntry, createMultipleEntry } from '../controllers/entry.controller.js';
 
 const entryRoutes = express.Router();
 
-entryRoutes.post('/create', createEntry);
-
+entryRoutes.post('/create-entry', createEntry);
+entryRoutes.post('/create-entries', createMultipleEntry);
 
 export default entryRoutes;
